@@ -1,8 +1,0 @@
-requests
-elevenlabs
-customtkinter
-sounddevice
-speechrecognition
-scipy
-pyaudio
-google-cloud-translate==2.0.1
