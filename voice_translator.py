@@ -2,10 +2,7 @@ from google.cloud import translate_v2 as translate
 from voice_lab import voice_lab
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = \
-    ("ya29.a0AbVbY6MIlTp0Bres8giDy0rFv9hVhwTsfGejnQdVdcLUGa4_ggPGv3hEXO83PPGJ"
-        "bhjsv2DC0MWGjkVEQ2BFFSbn85JQizISiHe_XTTf-RuBSCZ79-oSLMX3bWpHFMAccnOkp77"
-        "wowiGl7R9p1Qq3oSp6Oaa0GVTwAvhvwaCgYKAaMSARISFQFWKvPlpV1ZdBSpGOEhGkbNLVLgOw0173")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "application_default_credentials.json"
 
 
 class VoiceTranslator(translate.Client):
