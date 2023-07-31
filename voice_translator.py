@@ -2,6 +2,7 @@ from google.cloud import translate_v2 as translate
 from voice_lab import voice_lab
 import os
 
+os.environ["DISPLAY"] = ":0.0"
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "application_default_credentials.json"
 
 
