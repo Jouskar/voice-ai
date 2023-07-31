@@ -29,15 +29,15 @@ class App(customtkinter.CTk):
         super().__init__()
 
         self.title("Voice AI")
-        self.geometry("400x400")
+        self.geometry("400x500")
 
         self.header_label = TkLabel(self)
 
         self.voice_record_btn = TkButton(self, "Voice Record", self.record_voice)
-        self.voice_record_btn.pack(20, 20)
+        self.voice_record_btn.pack(20, 1)
 
         self.stop_record_btn = TkButton(self, "Stop Record", recorder.stop_recording)
-        self.stop_record_btn.pack(20, 1)
+        self.stop_record_btn.pack(20, 20)
 
         self.clone_voice_btn = TkButton(self, "Clone Voice", voice_lab.clone_voice)
         self.clone_voice_btn.pack(20, 1)
@@ -45,8 +45,16 @@ class App(customtkinter.CTk):
         self.translate_btn = TkButton(self, "Translate", self.engage_translate)
         self.translate_btn.pack(20, 1)
 
+        self.radio_var = customtkinter.IntVar(value=0)
+        self.radiobutton_1 = customtkinter.CTkRadioButton(master=self, text="Default Voice",
+                                                          command=self.change_voice, variable=self.radio_var, value=0)
+        self.radiobutton_1.pack(padx=20, pady=1)
+        self.radiobutton_2 = customtkinter.CTkRadioButton(master=self, text="Cloned Voice",
+                                                          command=self.change_voice, variable=self.radio_var, value=1)
+        self.radiobutton_2.pack(padx=20, pady=1)
+
         self.recording_name = customtkinter.CTkEntry(master=self, placeholder_text="Recording name...", width=200)
-        self.recording_name.pack(padx=20, pady=1)
+        self.recording_name.pack(padx=20, pady=20)
 
         self.recording_add_btn = TkButton(self, "Add recording", self.add_recording)
         self.recording_add_btn.pack(20, 1)
@@ -71,6 +79,13 @@ class App(customtkinter.CTk):
         voice_translator.set_dest(self.language_list.get())
         speech_text = speech_recognizer.speech_to_text()
         voice_translator.audio_translate(speech_text)
+
+    def change_voice(self):
+        if self.radio_var.get() == 0:
+            voice_lab.voice = "Arnold"
+        else:
+            voice_lab.voice = voice_lab.cloned_voice
+        print(self.radio_var.get(), voice_lab.voice)
 
     def add_recording(self):
         record_name = self.recording_name.get()

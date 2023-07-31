@@ -96,19 +96,20 @@ class VoiceLab:
 
         self.recorder = recorder
         self.voice = "Arnold"
-        self.model = "eleven_monolingual_v1"
+        self.cloned_voice = None
+        self.model = "eleven_multilingual_v1"
 
         set_api_key(self.__API_KEY)
 
     def clone_voice(self):
-        self.voice = \
+        self.cloned_voice = \
             clone(
                 name="Users Voice",
                 description="Cloned voice of the user",
                 files=self.recorder.samples,
             )
 
-        print(self.voice)
+        self.voice = self.cloned_voice
 
     def generate_audio(self, text: str):
         print(self.voice)

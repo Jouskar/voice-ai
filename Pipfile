@@ -12,6 +12,7 @@ speechrecognition = "*"
 scipy = "*"
 pyaudio = "*"
 google-cloud-translate = "==2.0.1"
+py2app = "*"
 
 [dev-packages]
 

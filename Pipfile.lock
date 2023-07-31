@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "306c7b24a02b504f2a223e08bef8d2c986096b6da65b8007aac6468f0084e6a2"
+            "sha256": "2fff5c8399f0447e2464d2409858e4cc396e70352f2b626868a2a74509dffcf1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -17,6 +17,13 @@
         ]
     },
     "default": {
+        "altgraph": {
+            "hashes": [
+                "sha256:ad33358114df7c9416cdb8fa1eaa5852166c505118717021c6a8c7c7abbd03dd",
+                "sha256:c8ac1ca6772207179ed8003ce7687757c04b0b71536f81e2ac5755c6226458fe"
+            ],
+            "version": "==0.17.3"
+        },
         "appnope": {
             "hashes": [
                 "sha256:02bd91c4de869fbb1e1c50aafc4098827a7a54ab2f39d9dcba6c9547ed920e24",
@@ -368,6 +375,13 @@
             "markers": "python_version >= '3.6'",
             "version": "==0.19.0"
         },
+        "macholib": {
+            "hashes": [
+                "sha256:44c40f2cd7d6726af8fa6fe22549178d3a4dfecc35a9cd15ea916d9c83a688e0",
+                "sha256:557bbfa1bb255c20e9abafe7ed6cd8046b48d9525db2f9b77d3122a63a2a8bf8"
+            ],
+            "version": "==1.16.2"
+        },
         "matplotlib-inline": {
             "hashes": [
                 "sha256:f1f41aab5328aa5aaea9b16d083b128102f8712542f819fe7e6a420ff581b311",
@@ -375,6 +389,13 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.1.6"
+        },
+        "modulegraph": {
+            "hashes": [
+                "sha256:1389108c8bdd0dd51c99df0d59160515a37a9150cddfb86d114326226bcd11b8",
+                "sha256:165517001fa568ab3703877215d174a6744bbbb8abd770cb8023601705922396"
+            ],
+            "version": "==0.19.5"
         },
         "numpy": {
             "hashes": [
@@ -479,6 +500,14 @@
                 "sha256:2b45320af6dfaa1750f543d714b6d1c520a1688dec6fd24d339063ce0aaa9ac3"
             ],
             "version": "==0.2.2"
+        },
+        "py2app": {
+            "hashes": [
+                "sha256:8dbd5f638d1cf63d6479f3095922b4e030d13de83da6a2a802c58c7d0f9e0a8e",
+                "sha256:f8cd88624450317e95497c43ab22f36c956a70560c67cf8d99c597b5ad7b81b7"
+            ],
+            "index": "pypi",
+            "version": "==0.28.6"
         },
         "pyasn1": {
             "hashes": [
